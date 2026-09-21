@@ -41,8 +41,8 @@ Hi, my name is [Daniel Jackson]{.mark}.
 :::
 
 - [X] Knit the document to check that the output looks okay.
-- [ ] Save, and push the output back up to GitHub. (Hint: see the instructions [here](https://soton-fds.github.io/github-tutorial.html))
-- [ ] Check that you can see the modified version in your personal GitHub repo.
+- [X] Save, and push the output back up to GitHub. (Hint: see the instructions [here](https://soton-fds.github.io/github-tutorial.html))
+- [X] Check that you can see the modified version in your personal GitHub repo.
 
 ## Palmer Penguins in `R`
 
@@ -65,14 +65,22 @@ When `quarto` compiles this document to HTML or PDF, the code is run, and the ou
 :::
 
 ```{r}
-library(tidyverse)
-penguins <- read_csv("data/penguins.csv")
-head(penguins)
-summary(penguins)
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+library(tidyverse) #where the data set can be found
+penguins <- read_csv("data/penguins.csv") #open the dataset named penguins
+head(penguins) #Header is penguins
+summary(penguins) # the summary function produces a summary eg mean, max, min of the penguins data set
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) + # creates the graph and labels axis and colours etc.
   geom_point() +
   theme_minimal()
-```
+``
+
+library(tidyverse) #where the data set can be found
+penguins <- read_csv("data/penguins.csv") #open the dataset named penguins
+head(penguins) #Header is penguins
+summary(penguins) # the summary function produces a summary eg mean, max, min of the penguins data set
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = sex)) + # creates the graph and labels axis and colours etc.
+  geom_point() +
+  theme_minimal()
 
 ### Tricks for Reproducibility
 
@@ -88,9 +96,9 @@ print("Hello world!")  # We can also add comments at the end of lines.
 
 ### Task 2 
 
-- [ ] Add comments before each line of code in the blocks above, explaining what is happening on each line.
-- [ ] Add some interpretation of the plot (in `markdown`, not as comments), after the code block.
-- [ ] Create a second plot, below, that colours the dots by sex instead of by species.
+- [X] Add comments before each line of code in the blocks above, explaining what is happening on each line.
+- [X] Add some interpretation of the plot (in `markdown`, not as comments), after the code block.
+- [X] Create a second plot, below, that colours the dots by sex instead of by species.
 
 If you don't know how to do something in `R` you have a few options:
 
